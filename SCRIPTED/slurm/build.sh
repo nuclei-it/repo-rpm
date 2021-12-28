@@ -2,6 +2,8 @@
 
 VERSION="21.08.5"
 
+source scl_source enable devtoolset-10
+
 wget -c "https://download.schedmd.com/slurm/slurm-${VERSION}.tar.bz2"
 
 rpmbuild -ts "slurm-${VERSION}.tar.bz2"
