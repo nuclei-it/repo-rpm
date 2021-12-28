@@ -1,3 +1,0 @@
-FROM centos:7
-RUN yum -y update \
-    && yum -y --setopt=group_package_types=mandatory,default,optional group install "Development Tools"

@@ -1,0 +1,8 @@
+FROM centos:7
+RUN yum -y update \
+    && yum -y install epel-release centos-release-scl \
+    && yum -y upgrade \
+    && yum -y --setopt=group_package_types=mandatory,default,optional group install "Development Tools" \
+    && yum -y install pkgconfig devtoolset-10 \
+    && yum -y clean all
+
