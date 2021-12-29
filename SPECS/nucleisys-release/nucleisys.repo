@@ -1,0 +1,29 @@
+[nucleisys]
+name=Nuclei System Technology Public RPM Repository - $basearch
+baseurl=http://repo.it.nucleisys.com/rpm/el7/$basearch
+#mirrorlist=
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-0
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-1
+
+[nucleisys-debuginfo]
+name=Nuclei System Technology Public RPM Repository - $basearch - Debug
+baseurl=http://repo.it.nucleisys.com/rpm/el7/$basearch/debug
+#mirrorlist=
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-0
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-1
+
+[nucleisys-source]
+name=Nuclei System Technology Public RPM Repository - $basearch - Source
+baseurl=http://repo.it.nucleisys.com/rpm/el7/SRPMS
+#mirrorlist=
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-0
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NUCLEI-MANUAL-1
