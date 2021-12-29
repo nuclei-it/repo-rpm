@@ -2,6 +2,8 @@
 
 ## Usage
 
+Note: Public repository is a work in progress. Stay tuned.
+
 ## Development
 
 ### Directory Structure
@@ -25,3 +27,6 @@ Collect the artifacts from:
 - `/root/rpmbuild/RPMS/**/*.rpm`
 - `/root/rpmbuild/SRPMS/*.rpm`
 
+## License
+
+Files, unless noted otherwise, is licensed under the MIT license.
