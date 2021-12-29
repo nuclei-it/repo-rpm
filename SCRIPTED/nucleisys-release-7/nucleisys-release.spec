@@ -1,6 +1,6 @@
 Name:           nuclei-rpm-public
 Version:        7
-Release:        1
+Release:        1%{?dist}
 Summary:        Nuclei System Technology Public RPM Repository repository configuration
 
 Group:          System Environment/Base
@@ -13,14 +13,14 @@ Source2:        RPM-GPG-KEY-NUCLEI-MANUAL-0
 Source3:        RPM-GPG-KEY-NUCLEI-MANUAL-1
 
 BuildArch:      noarch
-Requires:       redhat-release >=  %{version}
+Requires:       redhat-release >= %{version}
 
 %description
 This package contains the Nuclei System Technology Public RPM Repository repository
 GPG key as well as configuration for yum.
 
 %prep
-%setup -q  -c -T
+#%setup -c -T
 
 %build
 
@@ -28,7 +28,8 @@ GPG key as well as configuration for yum.
 rm -rf $RPM_BUILD_ROOT
 
 #GPG Key
-install -Dpm 644 -T $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg %{SOURCE2} %{SOURCE3}
+install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
+install -Dpm 644 -t $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg %{SOURCE2} %{SOURCE3}
 
 # yum
 install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
@@ -39,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc GPL
+#%doc GPL
 %config(noreplace) /etc/yum.repos.d/*
 /etc/pki/rpm-gpg/*
 
