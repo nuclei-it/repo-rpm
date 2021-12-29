@@ -19,7 +19,7 @@ popd
 ### Compilation
 
 ```shell
-docker run --rm -it -v $(pwd):/appdata repo-rpm:centos7 bash
+docker run --rm -it -v "$(pwd):/appdata" repo-rpm:centos7 bash
 bash /appdata/SCRIPTED/<software>/build.sh
 ```
 
